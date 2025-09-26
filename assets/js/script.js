@@ -37,7 +37,7 @@ function updateNavbar() {
       alert("Anda berhasil logout!");
     });
   } else {
-    authMenu.innerHTML = `<a href="login/login.html">Login</a>`;
+    authMenu.innerHTML = `<a href="login/login">Login</a>`;
   }
 }
 

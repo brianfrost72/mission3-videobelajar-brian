@@ -12,7 +12,7 @@
       <!-- Navbar -->
 <nav class="navbar">
 <!--  <div class="logo">MyWebsite</div> -->
-    <a href="../index.html" class="logo-link">
+    <a href="../index" class="logo-link">
       <img src="assets/images/img/logo.png" alt="logo" width="100%" height="100%"/>
   </a>
   
@@ -145,7 +145,7 @@
         </div>
         <button type="submit">Kirim Tautan Reset</button>
       `;
-      switchText.innerHTML = `<a href="login.html" id="back-login">Kembali ke Login</a>`;
+      switchText.innerHTML = `<a href="login" id="back-login">Kembali ke Login</a>`;
       bindLinks();
     }
 
@@ -182,11 +182,11 @@ document.addEventListener("submit", (e) => {
   if (formTitle.innerText === "Masuk ke Akun") {
     localStorage.setItem("isLoggedIn", "true");
     alert("Login berhasil!");
-    window.location.href = "../index.html";
+    window.location.href = "../index";
   } else if (formTitle.innerText === "Pendaftaran Akun") {
     localStorage.setItem("isLoggedIn", "true");
     alert("Registrasi berhasil! Kamu harus login.");
-    window.location.href = "../login/login.html";
+    window.location.href = "../login/login";
   } else if (formTitle.innerText === "Reset Kata Sandi") {
     alert("Tautan reset sudah dikirim ke email.");
     showLogin();
@@ -201,7 +201,7 @@ function handleCredentialResponse(response) {
   console.log("ID Token Google:", response.credential);
   localStorage.setItem("isLoggedIn", "true");
   alert("Login Google berhasil!");
-  window.location.href = "../index.html";
+  window.location.href = "../index";
 }
 
 function showHide() {
