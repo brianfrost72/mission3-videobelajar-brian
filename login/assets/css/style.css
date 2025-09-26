@@ -1,0 +1,219 @@
+    body {
+      font-family: Arial, sans-serif;
+      background: #ecf0f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .logo-img {
+  max-width: 170px;  /* batas maksimal di layar besar */
+  width: 40%;        /* relatif, biar fleksibel */
+  height: auto;      /* biar proporsional */
+}
+
+.logo-link {
+  display: inline-block;   /* biar bisa diatur ukurannya */
+  text-decoration: none;   /* hilangkan underline */
+}
+
+.logo-img {
+  display: block;          /* hilangkan space bawah */
+  max-width: 150px;        /* maksimal di layar besar */
+  width: 100%;             /* isi penuh si <a> */
+  height: auto;
+}
+
+/* Atur agar link tidak bikin logo kecil */
+.navbar .logo-link {
+  max-width: 150px;  /* batas ukuran logo */
+}
+
+
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Supaya container form tidak ketiban navbar */
+.container {
+  margin-top: 100px; /* tambahkan jarak dari atas */
+}
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 420px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    h5 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #bab5b5;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+.form-check {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+
+.form-check input[type="checkbox"] {
+  width: auto;
+  height: auto;
+}
+
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bdc3c7;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .phone-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .phone-group select {
+      width: 30%;
+    }
+
+    .phone-group input {
+      width: 70%;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #28a745;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff6600;
+    }
+
+    .forgot {
+      text-align: right;
+      margin: -10px 0 15px;
+    }
+
+    .forgot a {
+      font-size: 13px;
+      color: #28a745;
+      text-decoration: none;
+    }
+
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #888;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      height: 1px;
+      width: 40%;
+      background: #ccc;
+      position: absolute;
+      top: 50%;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .switch a {
+      color: #28a745;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .switch a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+      .phone-group {
+        flex-direction: column;
+      }
+      .phone-group select, .phone-group input {
+        width: 100%;
+      }
+    }
+    /* Di HP (layar kecil), biar logonya tidak kekecilan */
+@media (max-width: 480px) {
+  .logo-img {
+    max-width: 120px;
+    width: 60%;
+  }
+}
